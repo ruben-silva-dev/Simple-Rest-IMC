@@ -1,0 +1,65 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "Calculo IMC",
+        "description": "Calcula o IMC com base na altura e peso passados como parametro"
+    },
+    "definitions": {
+        "Parametro": {
+            "type": "object",
+            "properties": {
+                "altura": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "peso": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "Resultado": {
+            "type": "object",
+            "properties": {
+                "imc": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        }
+    },
+    "paths": {
+        "/calcular": {
+            "get": {
+                "description": "Retorna o calculo do IMC",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "parametro",
+                        "in": "body",
+                        "description": "Objeto com os parametros do calculo",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Parametro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Resposta de sucesso",
+                        "schema": {
+                            "title": "resultado",
+                            "$ref": "#/definitions/Resultado"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
