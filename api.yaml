@@ -1,0 +1,67 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  version: "1.0"
+  title: Calculo IMC
+  description: Calcula o IMC com base na altura e peso passados como parametro
+
+
+definitions:
+  Parametro:
+    type: object
+    properties:
+      altura:
+        type: number
+        format: double
+      peso:
+        type: number
+        format: double
+  
+  Resultado:
+    type: object
+    properties:
+      imc:
+        type: number
+        format: double
+
+# Describe your paths here
+paths:
+  # This is a path endpoint. Change it.
+  /calcular:
+    # This is a HTTP operation
+    get:
+      # Describe this verb here. Note: you can use markdown
+      description:
+        Retorna o calculo do IMC
+      # This is array of GET operation parameters:
+      
+      consumes:
+        - application/json
+      
+      produces:
+        - application/json
+      
+      parameters:
+        # An example parameter that is in query and is required
+        -
+          name: parametro
+          in: body
+          description: Objeto com os parametros do calculo
+          required: true
+          schema:
+            $ref: "#/definitions/Parametro"
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Resposta de sucesso
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: resultado
+            $ref: "#/definitions/Resultado"
+            
