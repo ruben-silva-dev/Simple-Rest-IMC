@@ -62,6 +62,5 @@ paths:
           # A schema describing your response object.
           # Use JSON Schema format
           schema:
-            title: resultado
             $ref: "#/definitions/Resultado"
             
