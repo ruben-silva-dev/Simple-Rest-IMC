@@ -54,7 +54,6 @@
                     "200": {
                         "description": "Resposta de sucesso",
                         "schema": {
-                            "title": "resultado",
                             "$ref": "#/definitions/Resultado"
                         }
                     }
