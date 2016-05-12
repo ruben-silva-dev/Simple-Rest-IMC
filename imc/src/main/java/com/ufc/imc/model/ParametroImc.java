@@ -1,6 +1,6 @@
 package com.ufc.imc.model;
 
-public class Parametro {
+public class ParametroImc {
 
 	private Double altura;
 
@@ -39,7 +39,7 @@ public class Parametro {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Parametro other = (Parametro) obj;
+		ParametroImc other = (ParametroImc) obj;
 		if (altura == null) {
 			if (other.altura != null)
 				return false;

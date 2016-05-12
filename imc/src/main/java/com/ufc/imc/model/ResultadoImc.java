@@ -1,6 +1,6 @@
 package com.ufc.imc.model;
 
-public class Resultado {
+public class ResultadoImc {
 
 	private Double imc;
 
@@ -28,7 +28,7 @@ public class Resultado {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Resultado other = (Resultado) obj;
+		ResultadoImc other = (ResultadoImc) obj;
 		if (imc == null) {
 			if (other.imc != null)
 				return false;

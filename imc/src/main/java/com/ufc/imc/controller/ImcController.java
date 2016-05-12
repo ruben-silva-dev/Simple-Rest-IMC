@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ufc.imc.model.Parametro;
-import com.ufc.imc.model.Resultado;
+import com.ufc.imc.model.ParametroImc;
+import com.ufc.imc.model.ResultadoImc;
 import com.ufc.imc.service.IImcService;
 
 @RestController
@@ -18,8 +18,8 @@ public class ImcController {
 	private IImcService imcService;
 
 	@RequestMapping(value = "/calcular", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public Resultado calcular(@RequestBody Parametro parametro) {
-		return imcService.calcularImc(parametro);
+	public ResultadoImc calcular(@RequestBody ParametroImc parametroImc) {
+		return imcService.calcularImc(parametroImc);
 	}
 
 }

@@ -1,11 +1,10 @@
 package com.ufc.imc.service;
 
-import com.ufc.imc.model.Parametro;
-import com.ufc.imc.model.Resultado;
+import com.ufc.imc.model.ParametroImc;
+import com.ufc.imc.model.ResultadoImc;
 
-@FunctionalInterface
 public interface IImcService {
 
-	public Resultado calcularImc(Parametro param);
+	public ResultadoImc calcularImc(ParametroImc param);
 
 }
