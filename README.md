@@ -5,7 +5,7 @@ Para acessar a documentação da API, acesse a url:"editor.swagger.io" e copie o
 
 O sistema foi implementado em java usando Spring Boot. Foi usado o modelo de JSON para a troca de mensagens através da arquitetura RESTful.
 
-O cálculo do IMC esta temporariamente disponível através da seguinte url: http://aviator1.cloudapp.net/imc/calcular
+O cálculo do IMC esta temporariamente disponível através da seguinte url: http://aviator1.cloudapp.net/imc/calcular .
 Uma mensagem no formato JSON deve ser passada no corpo da requisição com o método POST.
 Um exemplo de mensagem pode ser visto a seguir:
   
