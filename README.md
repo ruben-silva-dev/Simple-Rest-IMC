@@ -27,3 +27,11 @@ Um exemplo de mensagem pode ser visto a seguir:
   ```
   
 A ordem dos parâmetros não importa.
+
+O retorno, da mesma forma é um JSON com o imc devidamente calculado. Um exemplo do retorno pode ser visto a seguir:
+
+  ```
+  {
+    "imc": 22.877405702193368
+  }
+  ```
