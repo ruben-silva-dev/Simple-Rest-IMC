@@ -8,4 +8,10 @@ public class Constants {
 	public static final String SUBTRACT = "subtract";
 	public static final String MULTIPLY = "multiply";
 	public static final String DIVIDE = "divide";
+	
+	public static final String PAGINA_IMC = "imc";
+	
+	public static final String PARAMETRO = "parametro";
+	public static final String RESULTADO = "resultado";
+	
 }

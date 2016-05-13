@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" content="text/html" http-equiv="content-type"></meta>
+<link th:href="@{/webjars/bootstrap/4.0.0-alpha/css/bootstrap.min.css}" rel="stylesheet"></link>
+<title th:text="#{pagina.titulo}"></title>
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-primary">
+		<a class="navbar-brand" th:href="@{/}" th:text="#{pagina.titulo}"></a>
+	</nav>
+	
+	<div class="container">
+		
+		<form action="#" th:action="@{/calcular}" th:object="${parametro}" method="get" role="form">
+			<div class="form-group">
+				<label for="input-peso" class="form-control-label" th:text="#{label.peso}"></label>
+				<input id="input-peso" class="form-control" type="number" step="any" th:field="*{peso}"></input>
+			</div>
+			<div class="form-group">
+				<label for="input-altura" class="form-control-label" th:text="#{label.altura}"></label>
+				<input id="input-altura" class="form-control" type="number" step="any" th:field="*{altura}"></input>
+			</div>
+			<button type="submit" class="btn btn-primary-outline" th:text="#{botao.calcular}"></button>
+		</form>
+	</div>
+	
+	<div class="container" th:unless="${resultado == null}">
+		<hr></hr>
+		<div class="alert alert-success" th:text="#{alert.imc.mensagem} + ${resultado.imc}"></div>
+		<hr></hr>
+	</div>
+	
+</body>
+</html>
